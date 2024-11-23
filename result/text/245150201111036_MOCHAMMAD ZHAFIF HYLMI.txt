@@ -1,0 +1,885 @@
+LAPORAN PRAKTIKUM PEMROGRAMAN DASAR  
+BAB  :   SELEKSI KONDISI  
+NAMA  :   MOCHAMMAD ZHAFIF HYLMI  
+NIM  :   245150201111036  
+ASISTEN  :   BRAHMANTIO JATI PAMBUDI  
+     ARARYA PRAMADANI ALIEF RAHMAN  
+TGL PRAKTIKUM  :   26/09/2024  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2.5 Data dan Analisis Hasil Percobaan  
+2.5.1  Conditional Statement  
+Pertanyaan  
+1. Jalankan file constAss.java dan benahi jika menemukan kesalahan!  
+Syntax  
+1  public class constAss { 
+2    public static void main(String[] args){  
+3      String s = "filkom"; 
+4      String val = (s=="filkom")?"Brawijaya ": "null"; 
+5      System.out.println(s+" "+val); 
+6    } 
+7  } 
+ 
+Screenshot  
+ 
+Penjelasan  
+Statement yang digunakan pada baris 4 adalah ternary operator yang  sederhananya  memiliki 
+format sebagai berikut.   
+tipeData namaVar = (kondisi) ? jikaBenar : jikaSalah  
+Statement pada baris 4 menguji apakah value dari String s  sama dengan "filkom"  atau 
+tidak  dan hasilnya akan dimasukkan ke dalam variabel val. Jika benar, val akan bernilai 
+"Brawijaya"  dan jika salah, val akan bernilai "null" . Pada program di atas, value s 
+ternyata sama dengan "filkom"  maka val bernilai "Brawijaya"  sehingga method 
+println  pada baris 5 akan mencetak " filkom Brawijaya"  di terminal.  
+ 
+Pertanyaan  
+2. Ubah kode di atas pada baris ke empat dengan mengubah type data String menjadi int, 
+amati yang terjadi kemudian jelaskan!  
+Syntax  
+1  public class constAss { 
+2    public static void main(String[] args){  
+3      String s = "filkom"; 
+4      int val = (s=="filkom")?"Brawijaya ": "null"; 
+5      System.out.println(s+" "+val); 
+6    } 
+7  } 
+ 
+Screenshot  
+Penjelasan  
+Error terjadi karena tipe data dalam ternary operator selalu mengikuti tipe data variabel tempat 
+menyimpan hasilnya. Pada program di atas, ternary operator menghasilkan value 
+"Brawijaya"  jika kondisi yang diseleksi benar dan "null"  jika salah. Keduanya bertipe 
+data String , sedangkan variabel yang digunakan untuk menyimpan hasilnya bertipe data 
+int, akibatnya  terjadi ketidakcocokan tipe data, di mana program ditugaskan  menampung tipe 
+data String  di dalam variabel bertipe data int. 
+ 
+Pertanyaan  
+3. Tambahkan kode di bawah baris 5 dengan menambahkan program yang meminta input 
+user dengan memasukkan nama dan nim masing -masing mahasiswa dan jika benar 
+maka akan mencetak nama dan nim mahasiswa, jika salah maka mencetak “input nama 
+salah” jika memasukkan nama yang salah, “input nim salah” jika memasukka nim yang 
+salah  
+Syntax  
+1  import java.util.Scanner; 
+2  public class constAss { 
+3    public static void main(String[] args){ 
+4      Scanner in = new Scanner(System.in); 
+5      String s = "filkom"; 
+6      final String nama = "Mochammad Zhafif Hylmi "; 
+7      final String nim = "245150201111036 "; 
+8      // Input nama  
+9      System.out.print("Masukkan nama: "); 
+10      String inNama = in.nextLine (); 
+11      // Input NIM  
+12      System.out.print("Masukkan NIM : "); 
+13      String inNIM = in.nextLine (); 
+14      // Seleksi 
+15   String cekNama = inNama.equals(nama) ? "" : "Input 
+nama salah "; 
+16   String cekNim = inNIM.equals(nim) ? "" : "Input NIM 
+salah"; 
+17   String cek = (inNama.equals(nama) && 
+inNIM.equals(nim)) ? "Nama dan NIM sudah benar " : 
+String.format("%s\n%s", cekNama, cekNim ); 
+18      // Keluaran  
+19      System.out.println(cek); 
+20   
+21      String val = (s=="filkom")?"Brawijaya ": "null"; 
+22      System.out.println(s+" "+val); 
+23   
+24      in.close(); 
+25    } 
+26  } 
+ 
+Screenshot  
+ 
+ 
+ 
+ 
+Penjelasan  
+Method equals()  digunakan  untuk membandingkan dua String. Jika dua String yang 
+dibandingkan tidak sama persis, equals()  akan mengembalikan nilai false . Vice versa, 
+jika kedua String  sama persis, equals()  akan mengembalikan nilai true . 
+ 
+Pada program di atas, saya mendeklarasikan konstanta bertipe data String , yakni nama  dan 
+nim. Di bagian ternary operator, nantinya String inNama  (variabel yang menyimpan input 
+nama dari user) akan dibandingkan dengan nama . Begitu pula inNIM  (variabel yang 
+menympan input NIM dari user) akan dibandingkan dengan nim menggunakan method 
+equals() . Di sini saya menggunakan tiga ternary operator untuk mendapatkan seluruh 
+kemungkinan, yaitu: keduany a benar, nama salah, NIM  salah, dan keduanya salah. Dua ternary 
+operator digunakan untuk menyeleksi apakah input nama atau NIM  sudah benar atau tidak. 
+Ternary operator terakhir digunakan untuk menyeleksi apakah kedua input benar atau tidak . 
+Hasil seleksi bisa dilihat pada tangkapan -tangkapan layar di atas.  
+ 
+Pertanyaan  
+4. Buat program yang meminta untuk memasukkan nama dan password kemudian 
+program akan meminta user untuk memasukkan nama dan password sesuai input 
+sebelumnya. Jika benar maka program akan mencetak informasi biodata mahasiswa 
+dan jika salah maka program akan mencetak “data tak ditemukan”.  
+Syntax  
+1  import java.util.Scanner; 
+2  public class namaPass  { 
+3    public static void main(String[] args) { 
+4      Scanner input = new Scanner(System.in); 
+5   System.out.println("Daftarkan nama dan buat 
+password. "); 
+6      // Daftarkan nama  
+7      System.out.print("Masukkan nama    : "); 
+8      String nama = input.nextLine (); 
+9      // Buat password  
+10      System.out.print("Masukkan password: "); 
+11      String pass = input.nextLine (); 
+12      System.out.println("------------------------ "); 
+13   
+14      System.out.println("Log-in"); 
+15      // Nama 
+16      System.out.print("Nama    : "); 
+17      String inNama = input.nextLine (); 
+18      // Password  
+19      System.out.print("Password: "); 
+20      String inPass = input.nextLine (); 
+21      System.out.println("------------------------ "); 
+22   
+23   String data = String.format("%-8s%s%s\n%-8s%s%s\n%-
+8s%s%s\n%-8s%s%s\n%-8s%s%s","Nama", ": ", inNama, 
+"Password ", ": ", inPass, "NIM", ": ", 
+"245150201111036 ", "Gender", ": ", "Laki-laki", 
+"Kelas", ": ", "D"); 
+24   
+25   String cek = (inNama.equals(nama) && 
+inPass.equals(pass)) ? data : "Data tidak ditemukan "; 
+26   
+27      System.out.println(cek); 
+28   
+29      input.close(); 
+30    } 
+31  } 
+ 
+Screenshot   
+ 
+Penjelasan  
+Program di atas adalah program yang menampilkan biodata mahasiswa sesuai nama dan 
+password yang telah didaftarkan.  
+ 
+Kode pada baris 6 -11 adalah kode yang akan meminta user mendaftarkan nama dan membuat 
+password . Nama dan password yang didaftarkan akan disimpan dalam variabel nama  dan 
+pass . Kode pada baris 14 -20 adalah kode yang akan meminta user memasukkan nama dan 
+password sesuai dengan yang telah didaftarkan agar bisa mengakses biodata . Nama dan 
+password yang dimasukkan akan disimpan dalam variabel inNama  dan inPass . Kemudian, 
+kode pada baris 25 yang akan menyeleksi apakah nama dan password yang dimasukkan sudah 
+benar atau tidak. Jika salah satu atau keduanya salah, program akan mencetak Data tidak 
+ditemukan . Jika benar, program akan mencetak biodata user. Statement  yang digunakan 
+adalah ternary operator dan method equals()  digunakan untuk me nentukan apakah nama 
+dan password yang dimasukkan sesuai dengan yang telah didaftarkan.  
+ 
+2.5.2 If else  
+Pertanyaan  
+5. Jalankan file seleksi1.java dan benahi jika menemukan kesalahan!  
+Syntax  
+1  import java.util.Scanner;  
+2  public class seleksi1  { 
+3    public static void main(String[] args) {  
+4      Scanner in = new Scanner(System.in); 
+5      System.out.print("masukkan nilai: "); 
+6      int nilai = in.nextInt(); 
+7      if (nilai > 60) 
+8        System.out.println("Anda lulus ");  
+9      else if (nilai >= 40) 
+10        System.out.println("Anda harus mengulang ! "); 
+11      else { 
+12        System.out.println("Anda gagal "); 
+13      } 
+14      in.close(); 
+15    } 
+16  } 
+ 
+Screenshot  
+ 
+Penjelasan  
+Program di atas adalah demonstrasi penggunaan if statement. Dalam program di atas, if 
+statement digunakan untuk menyeleksi nilai yang dimasukkan user termasuk ke dalam kategori 
+apa di antara tiga kategori yang ada, yaitu Anda lulus , Anda harus mengulang , atau 
+Anda gagal . 
+ 
+Pertanyaan  
+6. Masukkan nilai 30, 60 dan 80 saat program dijalankan, dan jawablah dengan screenshot 
+hasil keluaran dari program!  
+Screenshot  
+ 
+Pertanyaan  
+7. Pada baris 9, ubahlah kode program menjadi System.out.println("Nilai 
+kurang!"); , pengaruh apa yang ditimbulkan setelah dilakukan pengubahan kode di 
+atas!  
+Syntax  
+1  import java.util.Scanner; 
+2  public class seleksi1  { 
+3    public static void main(String[] args) {  
+4      Scanner in = new Scanner(System.in); 
+5      System.out.print("masukkan nilai: "); 
+6      int nilai = in.nextInt(); 
+7      if (nilai > 60) 
+8        System.out.println("Anda lulus ");  
+9      else if (nilai >= 40) 
+10        System.out.println("Nilai kurang! "); 
+11      else { 
+12        System.out.println("Anda gagal "); 
+13      } 
+14      in.close(); 
+15    } 
+16  } 
+ 
+Screenshot  
+ 
+Penjelasan  
+Jika kita memberikan variabel nilai  dengan value di antara 40 hingga 60 (40 <= nilai < 60), 
+program akan mencetak  Nilai kurang!  alih-alih Anda harus mengulang ! . 
+ 
+2.5.3 Nested If  
+Pertanyaan  
+8. Jalankan file seleksi2.java dan benahi jika menemukan kesalahan!  
+Syntax  
+1  import java.util.Scanner; 
+2   
+3  public class seleksi2  { 
+4    public static void main(String[] args) { 
+5      Scanner in = new Scanner(System.in); 
+6      System.out.print("masukkan nilai: "); 
+7      int nilai = in.nextInt(); 
+8      if (nilai * 2 < 50) { 
+9        nilai += 10; 
+10      } 
+11      if (nilai <= 20) { 
+12        System.out.println("Filkom"); 
+13        if (nilai % 2 == 1) { 
+14          System.out.println("UB"); 
+15        } else { 
+16          System.out.println("Brawijaya "); 
+17        } 
+18      } else { 
+19        System.out.println("PTIIK"); 
+20        if (nilai % 2 == 1) { 
+21          System.out.println("UB"); 
+22        } else { 
+23          System.out.println("Brawijaya "); 
+24        } 
+25      } 
+26      in.close(); 
+27    } 
+28  } 
+ 
+Screenshot  
+ 
+Penjelasan  
+Program di atas adalah demonstrasi dari penggunaan nested if. Sederhananya, nested if adalah 
+penggunaan if statement  di dalam if  statement . Pada program di atas , posisi nested if bisa dilihat 
+pada baris 11 -17 dan 18 -23. Eksekusi nested if dijalankan secara sekuensial dari luar ke dalam , 
+yakni if statement di bagian lebih dalam akan dijalankan setelah if statemnet bagian lebih 
+luarnya dijalankan. Seperti contohnya pada nested if di baris 11 -17, if statement pada baris 12-
+17 akan dijalankan jika kondisi if st atement di baris 11 terpenuhi.  
+ 
+Pertanyaan  
+9. Masukkan nilai 5, 20, 30 saat program dijalankan, jelaskan alur jalan program dan beri 
+screenshot keluaran dari program!  
+Screenshot  
+ 
+Penjelasan  
+Alur kerja program  saat nilai = 5 : 
+a) nilai  akan dikalikan 2 dan dicek apakah kurang dari 50  oleh blok kode if pada baris 8 -9  
+➢ Apakah 5 * 2 = 10 < 50?  True 
+➢ Jalankan kode nilai += 10  
+➢ nilai = 5 + 10   
+➢ nilai = 15   
+➢ Teruskan ke blok kode berikutnya  
+b) nilai  yang sudah diseleksi akan diseleksi lagi oleh blok kode pada baris 11 -23. 
+➢ nilai = 15  
+➢ Apakah 15 <= 20? True -> cetak Filkom  
+➢ Apakah 15 ganjil? True (15 % 2 == 1 berarti apakah sisa 
+bagi 15 dengan 2 = 1  yang ekuivalen dengan apakah 15 itu 
+ganjil)  
+➢ Cetak UB  
+➢ Tampilkan di terminal:  
+Filkom 
+UB 
+Alur kerja program saat nilai = 20:  
+a) nilai  akan dikalikan 2 dan dicek apakah kurang dari 50 oleh blok kode if pada baris 8 -9  
+➢ Apakah 20 * 2 = 40 < 50? True  
+➢ Jalankan kode nilai += 10  
+➢ nilai = 20 + 10  
+➢ nilai = 30  
+➢ Teruskan ke blok kode berikutnya  
+b) nilai  yang sudah diseleksi akan diseleksi lagi oleh blok kode pada baris 11 -23. 
+➢ nilai = 30  
+➢ Apakah 30 <= 20? False -> cetak PTIIK  
+➢ Apakah 30 ganjil? False  
+➢ Cetak Brawijaya  
+➢ Tampilkan di terminal:  
+PTIIK  
+Brawijaya  
+Alur kerja program saat nilai = 30 : 
+a) nilai  akan dikalikan 2 dan dicek apakah kurang dari 50 oleh blok kode if pada baris 8 -9  
+➢ Apakah 30 * 2 = 60 < 50? False  
+➢ nilai = 30 
+➢ Teruskan ke blok kode berikutnya  
+b) nilai  yang sudah diseleksi akan diseleksi lagi oleh blok kode pada baris 11 -23. 
+➢ nilai = 30 
+➢ Apakah 30 <= 20? False -> cetak PTIIK  
+➢ Apakah 30 ganjil? False  
+➢ Cetak Brawijaya  
+➢ Tampilkan di terminal:  
+PTIIK  
+Brawijaya  
+ 
+Pertanyaan  
+10. Ubah kode di atas dengan memanfaatkan operasi and!  Syntax  
+1  import java.util.Scanner; 
+2   
+3  public class seleksi2  { 
+4    public static void main(String[] args) { 
+5      Scanner in = new Scanner(System.in); 
+6      System.out.print("masukkan nilai: "); 
+7      int nilai = in.nextInt(); 
+8      if (nilai * 2 < 50) { 
+9        nilai += 10; 
+10      } 
+11      if (nilai <= 20 && nilai % 2 == 1) { 
+12        System.out.println("Filkom"); 
+13        System.out.println("UB"); 
+14      } else if(nilai <= 20 && nilai % 2 == 0) { 
+15        System.out.println("Filkom"); 
+16        System.out.println("Brawijaya "); 
+17      } else if(nilai > 20 && nilai % 2 == 1) { 
+18        System.out.println("PTIIK"); 
+19        System.out.println("UB"); 
+20      } else { 
+21        System.out.println("PTIIK"); 
+22        System.out.println("Brawijaya "); 
+23      } 
+24      in.close(); 
+25    } 
+26  } 
+ 
+Screenshot  
+ 
+ 
+ 
+Penjelasan  
+Pada program di atas, saya memodifikasi blok kode nested if. Jika kita perhatikan program 
+awal, bisa diketahui bahwa  untuk  semua nilai  yang tidak lebih dari 20 , program akan 
+mencetak filkom , sebaliknya jika lebih dari 20, program akan mencetak PTIIK . Selain itu, 
+jika nilai  bernilai genap, program juga akan mencetak Brawijaya , dan jika ganjil, 
+program akan mencetak UB. Dari sini, saya termotivasi untuk membongkar nested if yang ada 
+dan mengubahnya menjadi empat kondisi, yaitu: 1) tidak lebih dari 20 dan ganjil; 2) tidak lebih 
+dari 20 dan genap ; 3) lebih dari 20 dan ganjil; dan 4) tidak ketiganya , yakni ketika nilai  
+bernilai lebih dari 20 dan genap ; jadi, "tidak ketiganya" di sini berarti bahwa nilai  tidak 
+memenuhi ketiga kondisi if/else if tersebut . Dari sini, nilai  pasti lebih dari 20 dan genap 
+karena mustahil tidak memenuhi kurang dari sama dengan 20 dan lebih dari 20.  
+ 
+Alur kerja program:  
+a) nilai  yang dimasukkan user akan dicek oleh blok if pada baris 8, apakah nilai * 2  
+kurang dari 50, atau dalam kata lain, apakah nilai < 25? Jika benar, nilai  akan 
+diberikan value baru, yakni nilai + 10  (bisa diperhatikan pada baris 9, statement yang 
+digunakan adalah nilai += 10  yang ekuivalen dengan nilai = nilai + 10 ), 
+kemudian hasilnya akan di teruskan menuju blok kode berikutnya. Jika salah (yaitu saat 
+nilai >= 25 ), nilai  akan langsung di teruskan  ke blok kode berikutnya.  
+b) nilai  yang sudah diseleksi pada blok if di baris 8 akan dicek oleh blok seleksi  di baris  
+11-23, apakah memenuhi salah satu kondisi yang ada?  
+c) Program akan mengeksekusi blok kode  yang kondisinya  paling pertama  (yakni paling atas 
+karena program memindai kode dari atas ke bawah)  dipenuhi oleh nilai , yaitu mencetak 
+salah satu dari argumen berikut: Filkom UB , Filkom Brawijaya , PTIIK UB , dan 
+PTIIK Brawijaya . 
+ 
+  
+2.5.4 Switch case  
+Pertanyaan  
+11. Jalankan file seleksi3.java dan benahi jika menemukan kesalahan!  
+Syntax  
+1  import java.util.Scanner; 
+2  public class seleksi3  { 
+3    public static void main(String[] args) { 
+4      Scanner in = new Scanner(System.in); 
+5      int uang; 
+6      System.out.println("Tipe Mata uang yang tersedia "); 
+7   System.out.println("1. Dolar - USA (kurs USD 1 = Rp 
+8000,-)"); 
+8   System.out.println("2. Yen - Jepang (kurs JPY 1 = Rp. 
+4000,- )"); 
+9   System.out.println("3. Poundsterling - Inggris( kurs 1 
+Poundsterling = Rp. 10.500, -)"); 
+10   System.out.println("4. Euro - MEE (kurs EUR 1 = Rp. 
+8900,- )"); 
+11   System.out.println("5. Riyal - Arab Saudi (kurs 1 
+Riyal = Rp. 1100, -)"); 
+12      System.out.print("Masukkan jenis mata uang anda: "); 
+13      int pilihan = in.nextInt(); 
+14      switch (pilihan) {  
+15        case 1: 
+16   System.out.println("Data diterima, jenis valuta 
+Anda: Dolar Amerika Serikat "); 
+17   System.out.print("Masukkan banyak uang anda(dalam 
+dolar): "); 
+18          uang = in.nextInt(); 
+19   System.out.println("Uang yang diterima: Rp 
+"+(uang*8000)+",-"); 
+20          break; 
+21        case 2: 
+22   System.out.println("Data diterima, jenis valuta 
+Anda: Yen Jepang "); 
+23   System.out.print("Masukkan banyak uang anda(dalam 
+Yen): "); 
+24          uang = in.nextInt(); 
+25   System.out.println("Uang yang diterima: Rp 
+"+(uang*4000)+",-"); 
+26          break; 
+27        case 3: 
+28   System.out.println("Data diterima, jenis valuta 
+Anda: Poundsterling Inggris "); 
+29   System.out.print("Masukkan banyak uang anda(dalam 
+dolar): "); 
+30          uang = in.nextInt(); 
+31   System.out.println("Uang yang diterima: Rp 
+"+(uang*10500)+",-"); 
+32          break; 
+33        case 4: 34   System.out.println("Data diterima, jenis valuta 
+Anda: Euro MEE "); 
+35   System.out.print("Masukkan banyak uang anda(dalam 
+Euro): "); 
+36          uang = in.nextInt(); 
+37   System.out.println("Uang yang diterima: Rp 
+"+(uang*8900)+",-"); 
+38          break; 
+39        case 5: 
+40   System.out.println("Data diterima, jenis valuta 
+Anda: Riyal Arab Saudi "); 
+41   System.out.print("Masukkan banyak uang anda(dalam 
+Riyal): "); 
+42          uang = in.nextInt(); 
+43   System.out.println("Uang yang diterima: Rp 
+"+(uang*1100)+",-"); 
+44          break; 
+45        default:  
+46          System.out.println("data tak ditemukan "); 
+47      } 
+48      in.close(); 
+49    } 
+50  } 
+ 
+Screenshot  
+ 
+Penjelasan  
+Program di atas  adalah  program untuk mengonversi mata uang asing ke Rupiah. User diberikan 
+lima opsi mata uang asing yang bisa dipilih . Seleksi switch case digunakan karena banyaknya 
+opsi jelas (fixed number of options)  dan bukan kondisi boolean.  Dalam switch case, program 
+hanya mengeksekusi case yang dipilih user. Di sini saya memilih tipe mata uang nomor 3 maka 
+program akan mengeksekusi case 3, yakni konverter mata uang Poundsterling ke Rupiah.  
+ 
+Baris yang saya warnai kuning (nomor 29) adalah letak bug yang ditemukan . Seharusnya 
+statement yang tepat adalah System.out.print("Masukkan banyak uang 
+anda(dalam poundsterling): ");  bukan System.out.print("Masukkan 
+banyak uang anda(dalam dolar): ");  
+ 
+Pertanyaan  
+12. Pada baris 18, 22, 26, 30 dan 34 hapus kode break , pengaruh apa yang terjadi setelah 
+pengubahan kode tersebut!  (→ hapus  semua kode break ) 
+Syntax  
+1  import java.util.Scanner; 
+2  public class seleksi3  { 
+3    public static void main(String[] args) { 
+4      Scanner in = new Scanner(System.in); 
+5      int uang; 
+6      System.out.println("Tipe Mata uang yang tersedia "); 
+7   System.out.println("1. Dolar - USA (kurs USD 1 = Rp 
+8000,-)"); 
+8   System.out.println("2. Yen - Jepang (kurs JPY 1 = Rp. 
+4000,- )"); 
+9   System.out.println("3. Poundsterling - Inggris( kurs 1 
+Poundsterling = Rp. 10.500, -)"); 
+10   System.out.println("4. Euro - MEE (kurs EUR 1 = Rp. 
+8900,- )"); 
+11   System.out.println("5. Riyal - Arab Saudi (kurs 1 
+Riyal = Rp. 1100, -)"); 
+12      System.out.print("Masukkan jenis mata uang anda: "); 
+13      int pilihan = in.nextInt(); 
+14      switch (pilihan) {  
+15        case 1: 
+16   System.out.println("Data diterima, jenis valuta 
+Anda: Dolar Amerika Serikat "); 
+17   System.out.print("Masukkan banyak uang anda(dalam 
+dolar): "); 
+18          uang = in.nextInt(); 
+19   System.out.println("Uang yang diterima: Rp 
+"+(uang*8000)+",-"); 
+20        case 2: 
+21   System.out.println("Data diterima, jenis valuta 
+Anda: Yen Jepang "); 
+22   System.out.print("Masukkan banyak uang anda(dalam 
+Yen): "); 
+23          uang = in.nextInt(); 
+24   System.out.println("Uang yang diterima: Rp 
+"+(uang*4000)+",-"); 
+25        case 3: 
+26   System.out.println("Data diterima, jenis valuta 
+Anda: Poundsterling Inggris "); 
+27   System.out.print("Masukkan banyak uang anda(dalam 
+dolar): "); 
+28          uang = in.nextInt(); 
+29   System.out.println("Uang yang diterima: Rp 
+"+(uang*10500)+",-"); 
+30        case 4: 
+31   System.out.println("Data diterima, jenis valuta 
+Anda: Euro MEE "); 
+32   System.out.print("Masukkan banyak uang anda(dalam 
+Euro): "); 
+33          uang = in.nextInt(); 
+34   System.out.println("Uang yang diterima: Rp 
+"+(uang*8900)+",-"); 35        case 5: 
+36   System.out.println("Data diterima, jenis valuta 
+Anda: Riyal Arab Saudi "); 
+37   System.out.print("Masukkan banyak uang anda(dalam 
+Riyal): "); 
+38          uang = in.nextInt(); 
+39   System.out.println("Uang yang diterima: Rp 
+"+(uang*1100)+",-"); 
+40        default:  
+41          System.out.println("data tak ditemukan "); 
+42      } 
+43      in.close(); 
+44    } 
+45  } 
+ 
+Screenshot  
+ 
+Penjelasan  
+Jika kode break  dihilangkan, program akan terus berjalan  (terus mengeksekusi case 
+berikutnya)  hingga menyentuh case default . Hal tersebut terjadi karena kode break  
+bertugas menghentikan program untuk mengeksekusi case berikutnya setelah case awal selesai 
+dijalankan. Bisa diperhatikan pada hasil tangkap layar di atas, program seharusnya berhenti 
+setelah case 1  dijalankan (di sini saya memilih opsi 1) , tetapi program melanjutkan 
+mengeksekusi case berikutnya (case 2 – 5 dan default ). 
+ 
+Pertanyaan  
+13. Apa perbedaan seleksi kondisi dengan menggunakan switch case dan if -else, dan kapan 
+kita harus menggunakan if -else dan kapan menggunakan switch case?  
+Penjelasan  
+Switch case memiliki banyak opsi (tergantung pilihan user ; tidak menyeleksi kondisi boolean ), 
+sedangkan if -else hanya memiliki dua opsi dalam seleksinya (benar atau salah ; yang diseleksi 
+adalah kondisi boolean ). Gunakan if -else jika range pilihannya tidak terbatas (misalnya dalam 
+interval; kontinu; the number of option s are not fixed). Gunakan switch case jika range 
+pilihannya terbatas (misalnya memilih antara opsi 1 dengan opsi 2; diskret; the number of 
+option s are fixed)  
+ 
+ 
+  2.5.5 Tugas Praktikum  
+1. Buatlah program sebagai berikut dengan menggunakan metode switch case  
+ 
+Syntax  
+1  // Program untuk menghitung luas dan keliling persegi 
+panjang, lingkaran, atau segitiga  
+2  // Note: rumus Heron digunakan untuk mencari luas segitiga  
+3  // L = sqrt(s*(s -a)*(s-b)*(s-c)) 
+4  import java.util.Scanner; 
+5  public class TP1_Luas  { 
+6    public static void main(String[] args) { 
+7      Scanner input = new Scanner(System.in); 
+8      String bangun = ""; 
+9      // Pilihan menu  
+10   System.out.println("Menu:"); 
+11   System.out.println("1. menghitung luas dan keliling 
+persegi panjang "); 
+12   System.out.println("2. menghitung luas dan keliling 
+lingkaran "); 
+13   System.out.println("3. menghitung luas dan keliling 
+segitiga "); 
+14   
+15      // User memasukkan opsi  
+16      System.out.print("\nPilihan Anda: "); 
+17      int opsi = input.nextInt(); 
+18      switch(opsi) {  
+19        case 1 -> { // Persegi panjang  
+20          bangun = "persegi panjang "; 
+21   
+22          // Masukkan panjang (p)  
+23          System.out.printf("%-12s","Masukkan p: "); 
+24          int p = input.nextInt(); 
+25          // Masukkan lebar (l)  
+26          System.out.printf("%-12s","Masukkan l: "); 
+27          int l = input.nextInt(); 
+28           
+29          // Seleksi apakah p dan l nilainya valid  
+30          if(p < 0 || l < 0) { 
+31            System.out.println("p atau l tidak valid! "); 
+32          } else { 
+33   System.out.printf("\n%-24s%s%d\n","Keliling " + 
+bangun, ": ", 2*(p + l)); 
+34   System.out.printf("%-24s%s%d\n","Luas " + 
+bangun, ": ", p*l); 
+35          } 
+36        } 
+37        case 2 -> { // Lingkaran  
+38          bangun = "lingkaran "; 
+39          final double PI = Math.PI; 
+40   
+41          // Masukkan jari -jari (r)  
+42          System.out.print("Masukkan r: "); 
+43          int r = input.nextInt(); 
+44   
+45          // Seleksi apakah nilai r valid (r >= 0)  
+46          if(r < 0) { 
+47            System.out.println("Nilai r tidak valid! "); 
+48          } else { 
+49   System.out.printf("\n%-18s%s%.2f \n","Keliling " 
++ bangun, ": ", 2*PI*r); 
+50   System.out.printf("%-18s%s%.2f \n","Luas " + 
+bangun, ": ", PI*r*r); 
+51          } 
+52        } 
+53        case 3 -> { 
+54          bangun = "segitiga "; 
+55   
+56          // Masukkan a  
+57          System.out.print("Masukkan a: "); 
+58          int a = input.nextInt(); 
+59          // Masukkan b  
+60          System.out.print("Masukkan b: "); 
+61          int b = input.nextInt(); 
+62          // Masukkan c  
+63          System.out.print("Masukkan c: "); 
+64          int c = input.nextInt(); 
+65           
+66          // Seleksi untuk pertidaksamaan segitiga  
+67          int terbesar  = a; 
+68          int terkecil  = a; 
+69          int mid = a; 
+70          // Terbesar  
+71          if(b > terbesar) {  
+72            terbesar = b; 
+73          } 
+74          if(c > terbesar) {  
+75            terbesar = c; 76          } 
+77          // Terkecil  
+78          if(b < terkecil) {  
+79            terkecil = b; 
+80          } 
+81          if(c < terkecil) {  
+82            terkecil = c; 
+83          } 
+84          // Middle 
+85          if(terkecil < b && b < terbesar) {  
+86            mid = b; 
+87          } 
+88          if(terkecil < c && c < terbesar) {  
+89            mid = c; 
+90          } 
+91   
+92          // Seleksi apakah a, b, dan c valid  
+93   if((a < 0 || b < 0 || c < 0) || (terkecil + mid) 
+<= terbesar) {  
+94   System.out.println("Nilai a, b, atau c tidak 
+valid!"); 
+95          } else { 
+96            double s = (a + b + c)/2.0; 
+97            double luas = Math.sqrt(s*(s-a)*(s-b)*(s-c)); 
+98   
+99            // Keluaran  
+100   System.out.printf("\n%-17s%s%.0f \n","Keliling " 
++ bangun, ": ", 2*s); 
+101   System.out.printf("%-17s%s%.2f \n","Luas " + 
+bangun, ": ", luas); 
+102          } 
+103        } 
+104        default -> { 
+105   System.out.println("Opsi tidak ditemukan, program 
+dihentikan... "); 
+106        } 
+107      } 
+108      input.close(); 
+109    } 
+110  } 
+ 
+Screenshot   
+ 
+Penjelasan  
+Program di atas adalah program yang digunakan untuk menghitung luas  dan keliling  persegi 
+panjang, lingkaran, atau segitiga  dan menampilkan hasilnya di layar pengguna . Seleksi switch 
+case digunakan karena opsi yang diberikan jelas (number of options are fixed) . 
+ 
+Nomor baris yang diwarnai hijau (nomor 18) adalah di mana blok kode switch case dimulai, 
+sedangkan yang diwarnai hitam adalah  letak header dari masing -masing case. Dalam program 
+ini, saya menggunakan format switch case Lambda karena tampak lebih rapi dan tidak 
+memerlukan kode break  sehingga mengurangi potensi logic error  (lupa menuliskan kode 
+break  di setiap case).  
+ 
+Program ini digunakan untuk menghitung luas dan keliling maka angka yang dimasukkan user 
+harus valid, yakni tidak bernilai negatif dan memenuhi syarat bangun datar tertentu. Oleh 
+karena itu, perlu dilakukan seleksi terhadap input user  dengan tujuan agar hasil yang 
+didapatkan masuk akal (tidak bernilai negatif). Nomor baris yang diwarnai biru adalah letak 
+seleksinya. Di sini saya menggunakan if -else karena untuk menyeleksi kebenaran suatu 
+kondisi.  Jika nilai yang dimasukkan user tidak valid, program akan mencetak peringatan bahwa 
+input yang diberikan tidak valid.  
+ 
+Nomor baris yang diwarnai coklat menunjukkan  seleksi spesial untuk segitiga. Misalkan suatu 
+segitiga memiliki panjang sisi -sisi a, b, dan c dengan c sebagai sisi terpanjangnya maka a, b, 
+dan c harus memenuhi ketaksamaan  segitiga: 𝑎+𝑏>𝑐. Maka dari itu, seleksi ini saya 
+tambahkan untuk mengecek apakah nilai a, b, dan c yang dimasukkan user memenuhi 
+ketaksamaan tersebut. Jika tidak memenuhi, program akan mencetak peringatan bahwa inpu t 
+tidak valid.  
+ 
+2. Susun program dengan tampilan sebagai berikut dengan menggunakan metode if -else!  
+ 
+Syntax  
+1  // Ini adalah program untuk menghitung IMT dan menentukan 
+kategorinya  
+2  import java.util.Scanner; 
+3  public class TP2_HitungIMT  { 
+4    public static void main(String[] args) { 
+5      Scanner input = new Scanner(System.in); 
+6      // Input 
+7      // Berat badan  
+8   System.out.printf("%-26s%s", "Masukkan berat badan 
+(kg)",": "); 
+9      double berat = input.nextDouble (); 
+10      // Tinggi badan  
+11   System.out.printf("%-26s%s", "Masukkan tinggi badan 
+(cm)",": "); 
+12      int tinggi = input.nextInt(); 
+13   
+14      // Penghitungan IMT  
+15      double imt = 10000*berat/(tinggi * tinggi);  
+16      // Dikali 10000 Karena tingginya dalam satuan cm  
+17   
+18      // Pengkategorian IMT  
+19      String kategori  = ""; 
+20      if(imt > 30) { 
+21        kategori = "kegemukan "; 
+22      } else if(imt > 25) { 
+23        kategori = "gemuk"; 
+24      } else if(imt > 18.5) { 
+25        kategori = "normal"; 
+26      } else { 
+27        kategori = "kurus"; 
+28      } 
+29       
+30      // Keluaran  
+31   System.out.printf("%s%-6.2f Termasuk %s ","IMT = ", 
+imt, kategori ); 
+32   
+33      input.close(); 
+34    } 
+35  } 
+ 
+Screenshot  
+ 
+ 
+Penjelasan  
+Program di atas akan menghitunng dan mengkategorikan IMT sesuai nilai berat dan tinggi 
+badan yang dimasukkan user.  Seleksi if -else digunakan dalam program ini karena user tidak 
+memilih sendiri kategori IMT -nya. Selai n itu, kategori IMT dinyatakan dalam interval (kondisi 
+boolean) sehingga seleksi if -else lebih cocok digunakan untuk menentukan kategorinya (karena 
+opsinya hanya ada dua, berada atau tidak berada dalam interval kategorinya).  
+ 
+Alur kerja program penghitung IMT ini adalah sebagai berikut.  
+a) Jika nilai IMT lebih dari 30, program akan menjalankan kode di dalam blok if  pada baris 
+20-21 dan mengabaikan blok else if serta else. Jika tidak lebih dari 30, program akan 
+melanjutkan seleksi ke blok berikutnya.  
+b) Jika nilai IMT lebih dari 25, program akan menjalankan kode di dalam blok else if pada 
+baris 22 -23 dan mengabaikan blok else if berikutnya serta else. Jika tidak lebih dari 25, 
+program akan melanjutkan seleksi ke blok berikutnya.  
+c) Jika nilai IMT lebih dari 18 .5, program akan menjalankan kode di dalam blok else if pada 
+baris 24 -25 dan mengabaikan blok else. Jika tidak lebih dari 18.5, program akan 
+melanjutkan seleksi ke blok berikutnya.  
+d) Jika nilai IMT tidak memenuhi ketiga kondisi di atas, program akan menjalankan kode di 
+dalam blok else dan seleksi selesai . 
+Urutan pengaturan interval ini sangat penting karena jika salah, akan terjadi logic error  di mana  
+kategori yang didapat tidak sesuai dengan nilai IMT -nya. 
+ 
+3. Susun program untuk masalah pen ggajian sebagai berikut:  
+Masukan yang dibutuhkan oleh program adalah: jumlah jam kerja tiap minggu. Keluaran 
+program adalah: total upah dari pegawai tertentu.  
+Aturan yang diterapkan adalah:  
+• Batas kerja maksimal adalah 60 jam / minggu, dengan upah Rp. 5000, - / jam. 
+Kelebihan jam kerja dari batas maksimum akan dianggap sebagai lembur dengan 
+upah Rp. 6000, - / jam.  
+• Batas kerja minimal adalah 50 jam / minggu. Apabila pegawai mempunyai jam kerja 
+di bawah batas kerja minimal ini, maka akan dikenakan denda sebesar Rp. 1000, - / 
+jam. 
+Contoh tampilan:  
+ 
+ 
+Syntax  
+1  // Program ini akan menghitung upah yang diterima pegawai 
+sesuai jam kerjanya  
+2  // Jam kerja minimum = 50, upah = 5000/jam, lembur = 
+6000/jam, denda = 1000/jam  
+3  import java.util.Scanner; 
+4  public class TP3_Pengupahan  { 
+5    public static void main(String[] args) { 
+6      Scanner input = new Scanner(System.in); 
+7      final int jkMin = 50; // Ini jam kerja minimumnya  
+8      final int jkMax = 60; // Ini jam kerja maksimalnya  
+9   
+10      // Masukkan jam kerja  
+11      System.out.print("Jam kerja : "); 
+12      int jamKrj = input.nextInt(); 
+13   
+14      // Penentuan upah, lembur, denda  
+15      int upah; 
+16      int lembur = 0; // Ini adalah nilai default -nya 
+17      int denda = 0; // Ini adalah nilai default -nya 
+18   
+19      if(jkMin <= jamKrj && jamKrj <= jkMax) {  
+20        upah = jamKrj * 5000; 
+21      } else if(jamKrj > jkMax) {  
+22        upah = jkMax * 5000; 
+23        lembur = (jamKrj - jkMax) * 6000; 
+24      } else { 
+25        upah = jamKrj * 5000; 
+26        denda = (jkMin - jamKrj) * 1000; 
+27      } 
+28   
+29      // Keluaran  
+30   System.out.printf("%-10s%s%d\n","Upah", "= Rp", upah); 
+31   System.out.printf("%-10s%s%d\n","Lembur", "= Rp", 
+lembur); 
+32   System.out.printf("%-10s%s%d\n","Denda", "= Rp", 
+denda); 
+33      System.out.println("--------------------- "); 
+34   System.out.printf("%-10s%s%d\n","Total", "= Rp", (upah 
++ lembur - denda)); 
+35   
+36      input.close(); 
+37    } 
+38  } 
+ 
+Screenshot  
+ 
+ 
+ 
+Penjelasan  
+Program tersebut digunakan untuk menghitung upah pekerja sesuai banyak jam kerjanya.  
+Seleksi if -else digunakan karena yang diseleksi adalah kondisi boolean (apakah jam kerja yang 
+dimasukkan berada dalam interval jam kerja atau tidak).  
+ 
+Variabel lembur  dan denda  diberi nilai inisiasi sama dengan 0 karena dalam beberapa jam 
+kerja, pekerja tidak menerima  uang lembur atau denda. Inisiasi juga bertujuan untuk meringkas 
+kode program karena tidak perlu mendeklarasikan dan memberikan nilai berkali -kali di dalam 
+masing -masing blok if, else if, dan else.  
+ 
+Alur kerja program:  
+a) Jika jam kerja yang dimasukkan berada di antara 50 dan 60 jam, program akan menghitung 
+upah menggunakan rumus  jam kerja kali upah per  jam dan membiarkan nilai vari abel 
+lembur  dan denda  sama dengan 0.  
+b) Jika jam kerja melebihi 60 jam, upah akan dihitung menggunakan jam kerja maksim um 
+dan selisih  jam kerja maksimum  dengan jam kerja yang dimasukkan akan digunakan untuk 
+menghitung uang lembur.  Nilai variabel denda  akan dibiarkan sama dengan 0.  
+c) Jika jam kerja yang dimasukkan tidak memenuhi ketiga kondisi di atas (artinya kurang dari 
+50), upah akan dihitung menggunakan jam kerja yang dimasukkan, sedangkan selisih 
+antara jam kerja yang dimasukkan dengan jam kerja minimum akan digunakan untuk 
+menghi tung denda. Nilai variabel lembur  akan dibiarkan sama dengan 0.  
+d) Total upah yang didapat pekerja adalah penjumlahan nilai variabel upah  dan lembur 
+dikurangi denda . 

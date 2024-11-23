@@ -1,0 +1,176 @@
+LAPORAN PRAKTIKUM PEMROGRAMAN DASAR
+
+
+
+
+
+
+
+
+
+2.5 Data dan Analisis Hasil Percobaan
+2.5.1 Conditional Statement
+Pertanyaan
+Jalankan file constAss.java dan benahi jika menemukan kesalahan! 
+Syntax
+
+Screenshot
+
+
+Penjelasan
+Tidak ada masalah dengan hasil outputnya.
+Pertanyaan
+Ubah kode di atas pada baris ke empat dengan mengubah type data String menjadi int, amati yang terjadi kemudian jelaskan! 
+Syntax
+
+Screenshot
+
+Penjelsan
+Tidak bisa karena variabel val memuat kalimat, bukan int yang memuat angka.
+Pertanyaan
+Tambahkan kode di bawah baris 5 dengan menambahkan program yang meminta input user dengan memasukkan nama dan nim masing-masing mahasiswa dan jika benar maka akan mencetak nama dan nim mahasiswa, jika salah maka mencetak “input nama salah” jika memasukkan nama yang salah, “input nim salah” jika memasukkan nim yang salah 
+
+Syntax
+
+Screenshot
+
+Penjelasan
+Mengisi nama dan NIM, kemudian akan menghasilkan jawaban tergantung input.
+Pertanyaan
+Buat program yang meminta untuk memasukkan nama dan password kemudian program akan meminta user untuk memasukkan nama dan password sesuai input sebelumnya. Jika benar maka program akan mencetak informasi biodata mahasiswa dan jika salah maka program akan mencetak “data tak ditemukan”. 
+Syntax
+
+Screenshot
+
+Penjelasan
+Mengisi nama dan password, lalu verifikasi ulang. Setelah itu, program akan memberikan hasil tergantung input.
+Pertanyaan
+Jalankan file seleksi1.java dan benahi jika menemukan kesalahan! 
+
+Syntax
+
+Screenshot
+
+
+Penjelasan
+Tidak ada masalah dengan program tersebut.
+Pertanyaan
+Masukkan nilai 30, 60 dan 80 saat program dijalankan, dan jawablah dengan screenshot hasil keluaran dari program! 
+
+Syntax
+
+Screenshot
+
+
+
+Penjelasan
+Jika menginput angka 30, akan mengoutput ”anda gagal”
+Jika menginput angka 60, akan mengoutput ”anda harus mengulang”
+Jika menginput angka 80, akan mengoutput ”anda lulus”
+Pertanyaan
+Pada baris 9, ubahlah kode program menjadi System.out.println("Nilai kurang!");, pengaruh apa yang ditimbulkan setelah dilakukan pengubahan kode di atas! 
+
+Syntax
+
+Screenshot
+
+Penjelasan
+Sistem tidak akan berjalan karena tidak ada ”if” di print out terakhir.
+Pertanyaan
+Jalankan file seleksi2.java dan benahi jika menemukan kesalahan! 
+
+Syntax
+
+Screenshot
+
+Penjelasan
+Tidak ada masalah dengan sistem.
+Pertanyaan
+Masukkan nilai 5, 20, 30 saat program dijalankan, jelaskan alur jalan program dan beri screenshot keluaran dari program! 
+Syntax
+
+Screenshot
+
+
+
+Penjelasan
+Jika menginput angka 5, akan mengoutput ”Filkom” dan ”UB”
+Jika menginput angka 20 dan 30, akan mengoutput ”PTIIK” dan ”Brawijaya”
+
+Pertanyaan
+Ubah kode di atas dengan memanfaatkan operasi and! 
+
+Syntax
+
+Screenshot
+
+Penjelasan
+Menggabungkan 2 if yang terpisah menjadi 1, lalu jika berhasil akan mencetak ”Filkom” dan jika tidak, akan mencetak ”PTIIK”
+Pertanyaan
+Jalankan file seleksi3.java dan benahi jika menemukan kesalahan! 
+
+Syntax
+
+Screenshot
+
+Penjelasan
+Sistem berjalan dengan baik tanpa mengalami error.
+Pertanyaan
+Pada baris 18,22,26,30 dan 34 hapus kode break, pengaruh apa yang terjadi setelah pengubahan kode tersebut! 
+
+Syntax
+
+Screenshot
+
+Penjelasan
+Setelah memilih mata uang, data tidak akan ditemukan.
+Pertanyaan
+Apa perbedaan seleksi kondisi dengan menggunakan switch case dan if-else, dan kapan kita harus menggunakan if-else dan kapan menggunakan switch case? 
+
+Syntax
+
+Screenshot
+-
+Penjelasan
+Menggunakan if else jika logika kompleks atau rentang nilai dan menggunakan switch case jika ada satu variabel yang dibandingkan dengan beberapa nilai tetap.
+
+
+2.5.5 Tugas Praktikum
+1. Buatlah program sebagai berikut dengan menggunakan metode switch case 
+Syntax
+
+Screenshot
+
+
+Penjelasan
+Program akan menyediakan 3 pilihan berupa angka yang masing-masing berbeda tujuannya. Namun jika kita memilih diluar ketiga pilihan, kita tidak akan mendapat data apapun.
+
+2. Untuk menentukan kriteria kegemukan, digunakan IMT (Indeks Massa Tubuh), yang bisa dihitung menggunakan rumus: 
+IMT = b / t2 
+b = berat badan (kg) 
+t = tinggi badan (m) 
+Kriteria untuk nilai IMT ditabelkan sebagai berikut:
+
+Syntax
+
+Screenshot
+
+
+Penjelasan
+Program menginput berat badan dan tinggi badan untuk menentukan seberapa ideal kita.
+3. 
+Susun program untuk masalah pengajian sebagai berikut: 
+Masukan yang dibutuhkan oleh program adalah: jumlah jam kerja tiap minggu. Keluaran program adalah: total upah dari pegawai tertentu. 
+Aturan yang diterapkan adalah: 
+• Batas kerja maksimal adalah 60 jam / minggu, dengan upah Rp. 5000,- / jam. Kelebihan jam kerja dari batas maksimum akan dianggap sebagai lembur dengan upah Rp. 6000,- / jam. 
+• Batas kerja minimal adalah 50 jam / minggu. Apabila pegawai mempunyai jam kerja di bawah batas kerja minimal ini, maka akan dikenakan denda sebesar Rp. 1000, - / jam. 
+
+
+Syntax
+
+Screenshot
+
+
+Penjelasan
+Sistem dapat menerima input jumlah jam kerja pegawai, menghitung upah, lembur, denda, dan menampilkan hasil perhitungan.
+

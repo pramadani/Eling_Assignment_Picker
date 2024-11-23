@@ -1,0 +1,133 @@
+LAPORAN PRAKTIKUM PEMROGRAMAN DASAR
+
+
+
+
+
+
+
+
+
+2.5 Data dan Analisis Hasil Percobaan
+2.5.1 Conditional Statement
+Pertanyaan
+Jalankan file constAss.java dan benahi jika menemukan kesalahan!
+= Tidak ditemukan kesalahan sintaksis pada program tersebut.
+
+
+Ubah kode di atas pada baris ke empat dengan mengubah type data String menjadi int,amati yang terjadi kemudian jelaskan!
+Syntax
+
+Screenshot
+
+Penjelasan
+= terjadi kesalahan sintaksis karena bukan termasuk angka, melainkan kalimat. sehingga terjadi eror.
+
+
+Tambahkan kode di bawah baris 5 dengan menambahkan program yang meminta input user dengan memasukkan nama dan nim masing-masing mahasiswa dan jika benar maka akan mencetak nama dan nim mahasiswa, jika salah maka mencetak “input nama salah” jika memasukkan nama yang salah, “input nim salah” jika memasukkan nim yang salah
+Syntax
+
+Screenshot
+
+
+
+
+
+Buat program yang meminta untuk memasukkan nama dan password kemudian
+program akan meminta user untuk memasukkan nama dan password sesuai input
+sebelumnya. Jika benar maka program akan mencetak informasi biodata mahasiswa dan
+jika salah maka program akan mencetak “data tak ditemukan”.
+
+Syntax
+
+Screenshot
+
+
+
+2.5.2 If else
+5. Jalankan file seleksi1.java dan benahi jika menemukan kesalahan!
+= Tidak ada kesalahan sintaksis pada program tersebut.
+
+
+6. Masukkan nilai 30, 60 dan 80 saat program dijalankan, dan jawablah dengan screenshot
+hasil keluaran dari program!
+Screenshot
+.
+
+
+7. Pada baris 9, ubahlah kode program menjadi System.out.println("Nilai kurang!");, pengaruh apa yang ditimbulkan setelah dilakukan pengubahan kode di atas!
+Screenshot
+ 
+Penjelasan
+Program tersebut akan mengeluarkan output “nilai kurang” jika nilai berada di antara 40-60.
+
+2.5.3 Nested If
+8. Jalankan file seleksi2.java dan benahi jika menemukan kesalahan!
+= Tidak ada kesalahan sintaksis pada program tersebut.
+
+9. Masukkan nilai 5, 20, 30 saat program dijalankan, jelaskan alur jalan program dan beri
+screenshot keluaran dari program!
+Screenshot
+
+
+
+
+
+
+
+10. Ubah kode di atas dengan memanfaatkan operasi and!
+Syntax
+
+Screenshot
+
+
+2.5.4 Switch case
+11. Jalankan file seleksi3.java dan benahi jika menemukan kesalahan!
+= Tidak ada kesalahan sintaksis pada program tersebut.
+
+12. Pada baris 18,22,26,30 dan 34 hapus kode break, pengaruh apa yang terjadi setelah
+pengubahan kode tersebut!
+Screenshot
+
+Penjelasan
+Karena tidak ada break maka program menjalankan case case selanjutnya sampai selesai.
+
+13. Apa perbedaan seleksi kondisi dengan menggunakan switch case dan if-else, dan kapan
+kita harus menggunakan if-else dan kapan menggunakan switch case?
+Penjelasan
+Switch case, digunakan hanya untuk satu variable. Digunakan saat, hanya ada satu variable yang akan di cek.
+If-else, digunakan saat terdapat banyak variable yang akan di cek. Juga memungkinkan operator logika untuk digunakan.
+
+14.
+
+Jawaban
+
+
+
+
+
+
+15.  Untuk menentukan kriteria kegemukan, digunakan IMT (Indeks Massa Tubuh), yang bisa
+dihitung menggunakan rumus:
+IMT = b / t2
+b = berat badan (kg)
+t = tinggi badan (m)
+Kriteria untuk nilai IMT ditabelkan sebagai berikut:
+
+Jawaban 
+
+
+16. Susun program untuk masalah pengajian sebagai berikut:
+Masukan yang dibutuhkan oleh program adalah: jumlah jam kerja tiap minggu. Keluaran
+program adalah: total upah dari pegawai tertentu.
+Aturan yang diterapkan adalah:
+• Batas kerja maksimal adalah 60 jam / minggu, dengan upah Rp. 5000,- / jam. Kelebihan jam kerja
+dari batas maksimum akan dianggap sebagai lembur dengan upah Rp. 6000,- / jam.
+• Batas kerja minimal adalah 50 jam / minggu. Apabila pegawai mempunyai jam kerja di bawah
+batas kerja minimal ini, maka akan dikenakan denda sebesar Rp. 1000, - / jam.
+Contoh tampilan:
+
+
+Jawaban 
+
+

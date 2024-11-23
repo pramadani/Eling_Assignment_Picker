@@ -1,0 +1,538 @@
+LAPORAN PRAKTIKUM PEMROGRAMAN DASAR
+BAB :   SELEKSI KONDISI
+NAMA :   Najma Zahira
+NIM :   245150207111056
+ASISTEN :   BRAHMANTIO JATI PAMBUDI
+    ARARYA PRAMADANI ALIEF RAHMAN
+TGL PRAKTIKUM :   26 September 2024
+2.5 Data dan Analisis Hasil Percobaan
+2.5.1 Conditional Statement
+Pertanyaan
+1. Jalankan file constAss. java dan benahi jika menemukan kesalahan !
+Syntax
+ public class ConstAss {
+    public static void main(String[] args){ 
+        String s = "filkom";
+        String val = (s=="filkom")?"Brawijaya": "null"; 
+        System.out.println(s+" "+val);
+        }
+}
+Screenshot
+Penjelasan
+Tidak ada kesalahan 
+Pertanyaan
+2. . Ubah kode di atas pada baris ke empat dengan mengubah type data String menjadi 
+int, amati yang terjadi kemudian jelaskan!
+Syntax
+ public class constAss{
+    public static void main(String[] args){ 
+    String s = "filkom";
+    int val = (s=="filkom")?"Brawijaya": "null"; 
+    System.out.println(s+" "+val);
+    }
+    }
+Screenshot 
+Penjelasan
+Terjadi error karena tidak sesuai dengan tipe datanya yang harusnya menggunakan tipe data 
+String bukan int
+3. Tambahkan kode di bawah baris 5 dengan menambahkan program yang meminta input 
+user dengan memasukkan nama dan nim masing-masing mahasiswa dan jika benar maka 
+akan mencetak nama dan nim mahasiswa, jika salah maka mencetak “input nama salah” jika 
+memasukkan nama yang salah, “input nim salah” jika memasukka nim yang salah
+Syntax
+public class ConstAss {
+    public static void main(String[] args) {
+        String s = "filkom";
+        String val = (s.equals("filkom"))?"Brawijaya": 
+"null";
+        System.out.println(s+" "+val);
+    Scanner scanner = new scanner (System.in);
+    String nama = scanner.nextLine();
+    String nim = scanner.nextLine();
+    String output = nim.equals("245150207111056") ? nama 
++ " " + nim : "input nama salah ";
+    System.out.println(output);
+    }
+    }
+Screenshoot
+Penjelasan
+Terjadi error seharusnya akan mencetak nama dan nim
+Pertanyaan 
+4.Buat program yang meminta untuk memasukkan nama dan password kemudian program akan 
+meminta user untuk memasukkan nama dan password sesuai input sebelumnya. Jika benar maka 
+program akan mencetak informasi biodata mahasiswa dan jika salah maka program akan mencetak 
+“data tak ditemukan”.
+Syntax
+public class ConstAss {
+    public static void main(String[] args) {
+        String s = "filkom";
+        String val = (s.equals"filkom")?"Brawijaya": 
+"null";
+        System.out.println(s+" "+val);
+    Scanner scaner = new scanner(System.in);
+    System.out.print("Register user");
+    System.out.print("masukkan nama:")
+    String regisNama = scanner.nextline();
+    System.out.println("masukkan password");
+    String regisPassword = scanner.nextline();
+    System.out.println("login user");
+    System.out.print("masukkan nama:");
+    String loginNama = scanner.nextline();
+    System.out.print("masukkan password:");
+    string loginPassword = scanner.nextline();
+    String output =loginNama.equals(regisnama) && 
+LoginPassword.equals(regisPassword)? "Namaku adalah " + 
+regisnama : "data tidak ditemukan 
+    System.out.println(output);
+    }
+ScreenshotPenjelasan
+Terjadi error,seharusnya akann mencetak informasi biodata mahasiswa
+2.5.2 If else
+Pertanyaan
+5. Jalankan file seleksi1.java dan benahi jika menemukan kesalahan!
+Syntax
+import java.util.Scanner; 
+public class seleksi1{
+public static void main(String[] args){ Scanner 
+in = new Scanner(System.in); 
+System.out.print("masukkan nilai: "); int 
+nilai = in.nextInt();
+if (nilai > 60)
+System.out.println("Anda lulus"); 
+else if (nilai >= 40)
+System.out.println("Anda harus mengulang !");
+else{
+System.out.println("Anda gagal");
+}
+}
+}
+Screenshot
+Penjelasan
+Tidak ada kesalahan 
+Pertanyaan
+6. Masukkan nilai 30, 60 dan 80 saat program dijalankan, dan jawablah dengan screenshot 
+hasil keluaran dari program!
+Syntax
+ import java.util.Scanner; 
+public class seleksi1{
+public static void main(String[] args){ Scanner 
+in = new Scanner(System.in); 
+System.out.print("masukkan nilai: "); int 
+nilai = in.nextInt();
+if (nilai > 60)
+System.out.println("Anda lulus"); 
+else if (nilai >= 40)
+System.out.println("Anda harus mengulang !");
+else{
+System.out.println("Anda gagal");
+}
+}
+}
+Screenshot
+Penjelasan
+“Jika nilanya lebih dari 60 maka anda lulus”
+Jika  nilai yang didapat 30 maka anda gagal ,
+Jika nilai anda 80 anda lulus ,
+Tetapi jika nilainya 60 anda harus mengulang 
+Pertanyaan
+7. Pada baris 9, ubahlah kode program menjadi System.out.println("Nilai kurang!");, 
+pengaruh apa yang ditimbulkan setelah dilakukan pengubahan kode di atas!
+Syntax
+import java.util.Scanner; 
+public class seleksi1{
+public static void main(String[] args){ Scanner 
+in = new Scanner(System.in); 
+System.out.print("masukkan nilai: "); int 
+nilai = in.nextInt();
+if (nilai > 60)
+System.out.println("Anda lulus"); 
+else if (nilai >= 40)
+System.out.println("nilai kurang !");
+else{
+System.out.println("Anda gagal");
+}
+}
+}
+Screenshot
+Penjelasan
+Jika yang dimasukkan nilai yang melebihi 40 maka hasil yag keluar yaitu nilai kurang 
+begitupun sebaliknya
+Pertanyaan
+8. Jalankan file seleksi2.java dan benahi jika menemukan kesalahan!
+Syntax
+import java.util.Scanner; 
+ public class seleksi2 {
+ public static void main(String[] args) {
+ Scanner in = new Scanner(System.in);
+ System.out.print("masukkan nilai: ");
+ int nilai = in.nextInt();
+ if (nilai * 2 < 50) {
+     nilai += 10;
+     }
+     if (nilai <= 20) {
+     System.out.println("Filkom");
+     if (nilai % 2 == 1) {
+     System.out.println("UB");
+     } else {
+     System.out.println("Brawijaya");
+     }
+     } else {
+     System.out.println("PTIIK");
+     if (nilai % 2 == 1) {
+ScreenshotPenjelasan
+Tidak ada kesalahan 
+Pertanyaan
+9. Masukkan nilai 5, 20, 30 saat program dijalankan, jelaskan alur jalan program dan beri 
+screenshot keluaran dari program!
+Syntax
+import java.util.Scanner; 
+ public class seleksi2 {
+ public static void main(String[] args) {
+ Scanner in = new Scanner(System.in);
+ System.out.print("masukkan nilai: ");
+ int nilai = in.nextInt();
+ if (nilai * 2 < 50) {
+     nilai += 10;
+     }
+     if (nilai <= 20) {
+     System.out.println("Filkom");
+     if (nilai % 2 == 1) {
+     System.out.println("UB");
+     } else {
+     System.out.println("Brawijaya");
+     }
+     } else {
+     System.out.println("PTIIK");
+     if (nilai % 2 == 1) {
+Screenshot
+Penjelasan
+Jika nilai yang dimasukkan 5 maka akan mencetak Fikom UB
+Jika nilai yang dimasukkan 20 maka akan mencetak PTIIK Brawijaya
+Jika nilai yag masukkan 30 maka akan mencetak PTIIK Brawijaya
+Pertanyaan 
+10. Ubah kode di atas dengan memanfaatkan operasi and!
+Syntax
+import java.util.Scanner; 
+ public class seleksi2 {
+ public static void main(String[] args) {
+ Scanner in = new Scanner(System.in);
+ System.out.print("masukkan nilai: ");
+ int nilai = in.nextInt();
+ if (nilai * 2 < 50) {
+     nilai += 10;
+     }
+     if (nilai <= 20 && nilai %2 ==1) {
+     System.out.println("Filkom");
+     System.out.println("UB");
+     } else if (nilai <=20 && nilai %2 !=1) {
+        System.out.println("Filkom");
+     System.out.println("Brawijaya");
+     } else if (nilai > 20 && nilai %2 ==1) { 
+     System.out.println("PTIIK");
+     System.out.println("UB");
+    } else if (nilai > 20 && nilai %2 !=1) { 
+        System.out.println("PTIIK");
+        System.out.println("Brawijaya");
+     }
+     }
+     }
+ScreenshotPenjelasan
+Tidak ada kesalahan sebenarnya sama saja hasilnya dengan nomer 8 hanya mennganti 
+dengan menggunakan operasi and
+2.5.4 Switch case
+Pertanyaan
+11. Jalankan file seleksi3.java dan benahi jika menemukan kesalahan!
+Syntax
+import java.util.Scanner;
+public class Seleksi3 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int uang;
+        System.out.println("Tipe Mata uang yang 
+tersedia");
+        System.out.println("1. Dolar - USA (kurs USD 1 = 
+Rp 8000,-)");
+        System.out.println("2. Yen - Jepang (kurs JPY 1 
+= Rp 4000,-)");
+        System.out.println("3. Poundsterling - Inggris 
+(kurs 1 Poundsterling = Rp. 10.500, -)");
+        System.out.println("4. Euro - MEE (kurs EUR 1 = 
+Rp. 8000,- )");
+        System.out.println("5. Riyal - Arab Saudi (kurs 
+1 Riyal = Rp. 1100,-)");
+        System.out.print("Masukkan jenis mata uang anda: 
+");
+        int pilihan = in.nextInt();
+        switch (pilihan) {
+            case 1:
+                System.out.println("Data diterima, jenis 
+valuta Anda: Dolar Amerika Serikat");
+                System.out.print("Masukkan banyak uang 
+anda(dalam dolar): ");
+                uang = in.nextInt();
+                System.out.println("Uang yang diterima: 
+Rp " + (uang*8000) + ",-");
+                break;
+            case 2:
+                System.out.println("Data diterima, jenis 
+valuta Anda: Yen Jepang");
+                System.out.print("Masukkan banyak uang 
+anda(dalam Yen): ");
+                uang = in.nextInt();
+                System.out.println("Uang yang diterima: 
+Rp " + (uang*4000) + ",-");
+                break;
+            case 3:
+                System.out.println("Data diterima, jenis 
+valuta Anda: Poundsterling Inggris");
+                System.out.print("Masukkan banyak uang 
+anda(dalam dolar): ");                uang = in.nextInt();
+                System.out.println("Uang yang diterima: 
+Rp " + (uang*10500) + ",-");
+                break;
+            case 4:
+                System.out.println("Data diterima, jenis 
+valuta Anda: Euro MEE");
+                System.out.print("Masukkan banyak uang 
+anda(dalam Euro): ");
+                uang = in.nextInt();
+                System.out.println("Uang yang diterima: 
+Rp " + (uang*8000) + ",-");
+                break;
+            case 5:
+                System.out.println("Data diterima, jenis 
+valuta Anda: Riyal Arab Saudi");
+                System.out.print("Masukkan banyak uang 
+anda(dalam Riyal): ");
+                uang = in.nextInt();
+                System.out.println("Uang yang diterima: 
+Rp " + (uang*1100) + ",-");
+                break;
+            default:
+                System.out.println("data tak 
+ditemukan");
+        }
+    }
+}
+ScreenshotPenjelasan
+Tidak ada kesalahan 
+Pertanyaan
+12. Pada baris 18,22,26,30 dan 34 hapus kode break, pengaruh apa yang terjadi setelah 
+pengubahan kode tersebut!
+Syntax
+import java.util.Scanner;
+public class Seleksi3 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int uang;
+        System.out.println("Tipe Mata uang yang 
+tersedia");
+        System.out.println("1. Dolar - USA (kurs USD 1 = 
+Rp 8000,-)");
+        System.out.println("2. Yen - Jepang (kurs JPY 1 
+= Rp 4000,-)");
+        System.out.println("3. Poundsterling - Inggris 
+(kurs 1 Poundsterling = Rp. 10.500, -)");
+        System.out.println("4. Euro - MEE (kurs EUR 1 = 
+Rp. 8000,- )");
+        System.out.println("5. Riyal - Arab Saudi (kurs 
+1 Riyal = Rp. 1100,-)");
+        System.out.print("Masukkan jenis mata uang anda: 
+");
+        int pilihan = in.nextInt();
+        switch (pilihan) {
+            case 1:
+                System.out.println("Data diterima, jenis 
+valuta Anda: Dolar Amerika Serikat");
+                System.out.print("Masukkan banyak uang 
+anda(dalam dolar): ");
+                uang = in.nextInt();
+                System.out.println("Uang yang diterima: 
+Rp " + (uang*8000) + ",-");
+            case 2:
+                System.out.println("Data diterima, jenis 
+valuta Anda: Yen Jepang");
+                System.out.print("Masukkan banyak uang 
+anda(dalam Yen): ");
+                uang = in.nextInt();
+                System.out.println("Uang yang diterima: 
+Rp " + (uang*4000) + ",-");
+            case 3:
+                System.out.println("Data diterima, jenis 
+valuta Anda: Poundsterling Inggris");
+                System.out.print("Masukkan banyak uang 
+anda(dalam dolar): ");
+                uang = in.nextInt();
+                System.out.println("Uang yang diterima: 
+Rp " + (uang*10500) + ",-");
+            case 4:
+                System.out.println("Data diterima, jenis 
+valuta Anda: Euro MEE");                System.out.print("Masukkan banyak uang 
+anda(dalam Euro): ");
+                uang = in.nextInt();
+                System.out.println("Uang yang diterima: 
+Rp " + (uang*8000) + ",-");
+            case 5:
+                System.out.println("Data diterima, jenis 
+valuta Anda: Riyal Arab Saudi");
+                System.out.print("Masukkan banyak uang 
+anda(dalam Riyal): ");
+                uang = in.nextInt();
+                System.out.println("Uang yang diterima: 
+Rp " + (uang*1100) + ",-");
+            default:
+                System.out.println("data tak 
+ditemukan");
+        }
+    }
+}
+Screenshot
+Penjelasan
+Yang terjadi , akan menghitung terus terusan karena tidak ada break sedangkan fungsi 
+break sendiri untuk menghentikan proses yang terjadi apabila perintah dijalankan
+Pertanyaan
+13. Apa perbedaan seleksi kondisi dengan menggunakan switch case dan if-else, dan kapan 
+kita harus menggunakan if-else dan kapan menggunakan switch case?
+Penjelasan
+If else : Memiliki 2 pilihan yang mutlak yaitu true or false. 
+Switch case : percabangan multi pilihan dengan beberapa case sebagai kondisi dan default.
+If else digunakan jika kondisi tidak terpenuhi
+Switch case dapat  digunakan sebagai pengganti pernyataan if else,jadi dapat digunakan 
+ketika pernyataan if else terlalu banyak.
+2.5.5 Tugas Praktikum
+1. 
+Syntax
+public class Main {
+    public class void.main(String[] args){
+    }
+        Scanner scan= new Scanner(System.in);
+        int 
+Keliling_Persegi_Panjang,Luas_Persegi_Panjang;
+        System.out.println("menu")
+        System.out.println("C. menghitung keliling 
+persegi panjang")
+System.out.println("D. menghitung luas persegi 
+panjang");
+System.out.println("");
+String menu;
+System.out.println("input menu : ");
+menu = scan.nextline();
+System.out.printf("Lebar : ");int Lebar = scan.nextInt();
+System.out.printf("panjang : ");
+int panjang = scan.nextInt();
+System.out.println("");
+ Keliling_Persegi_Panjang = (2*panjang)+(2*lebar);
+ Luas_Persegi_Panjang = (Panjang * Lebar);
+ for (int i = 1 <=14; i++)
+ Switch (menu){
+    case "C" : 
+    System.out.println(i + "Keliling = " + 
+Keliling_Persegi_Panjang);
+    break;
+    Switch (menu){ 
+        case "D" : 
+        System.out.println(i + "LUas = " + 
+Luas_Persegi_Panjang);
+        break;
+    }
+ }
+    }
+ScreenshotPenjelasan
+Terjadi error
+ Syntax
+ Taruh Hasil Codingan di sini, font : courier 12
+public class menghitungLuasSegitiga {
+    BuferedReader hitung = new BufferedReader ( new InputStreamReadear(System.in));
+    double ps,alas,tinggi,luas1;
+    String a,t,cari;
+    intx;
+    try {
+        System.out.println("Menu utama ");
+    System.out.println ("Segitiga sama sisi")
+        System.out.println("Pilihan : ");
+        System.out.println ("");
+        x = integer.parsentIn("");
+        Switch (x)
+        case 1: 
+        System.out.println("Masukkan alas :");
+        a = hitung.readLine ();
+        System.out.println("Masukkan tinggi : ");
+        t = hitung.readLine ();
+        alas + Double.parseDouble (a);
+        tinggi =Double parseDouble (t)
+        luas1 = (alas*tinggi)/2);
+        System.out.println("Luas Segitiga Siku - siku ; "+ luas);
+        break;
+        System.out.println("masukkan panjang sisi :");
+        sisi = hitung.readline ();
+        keliling = (sisi+sisi+sisi);
+        System.out.println("Keliling segitiga siku-siku");
+        break;
+    }
+}
+2. Susun program dengan tampilan sebagai berikut dengan menggunakan metode if-else!public class BerTing {
+public static void main(Strinf []args){
+    String BB ="" ("Masukkan berat badan :");
+    String TB="" ( "Masukkan tinggi badan");
+double BeratBadan = Double.perseDouble (BB);
+double TinggiBadan = Double.perseDouble (TB);
+double IMT =() Beratbadan/TinggiBadan);
+if ( BeratBadan < Imt) {
+    JOptionpane.showMessagediaog(null, "Badan anada 
+kurus");
+} else 
+if (BeratBadan < Imt < 25) {
+    JOptineonpane.showMessageDialog(null, "Badan anda 
+normal");
+}else 
+if (BeratBadan 25 < IMt <25){
+    JOptineonpane.showMessageDialog(null, "Badan anda 
+Gemuk");
+    }    else
+    if (BeratBadan Imt > 30 ){
+        JOptineonpane.showMessageDialog(null, "Badan 
+anda kegemukan);
+    }
+}
+}
+Penjelasan
+Terjadi error
+3.Susun program untuk masalah pengajian sebagai berikut: Masukan yang dibutuhkan oleh program 
+adalah: jumlah jam kerja tiap minggu. Keluaran program adalah: total upah dari pegawai tertentu. 
+Aturan yang diterapkan adalah: • Batas kerja maksimal adalah 60 jam / minggu, dengan upah Rp. 
+5000,- / jam. Kelebihan jam kerja dari batas maksimum akan dianggap sebagai lembur dengan upah 
+Rp. 6000,- / jam. • Batas kerja minimal adalah 50 jam / minggu. Apabila pegawai mempunyai jam 
+kerja di bawah batas kerja minimal ini, maka akan dikenakan denda sebesar Rp. 1000, - / jam
+Syntax
+ublic class Main {
+    public static void main (String []args){
+        Scanner input = new scanner (System.in);
+    System.out.print ("Menghitung gaji karyawan: ");
+    System.out.print("Nama Karyawan;");
+    String namakaryawan = userInput.nextLIne();
+    System.out.printl(" Masukkan Golongan (A,B): ");
+    System.out.print ("Masukkan jam lembur :");
+    int jamlembur = userInput.nextLine();
+    double gajipokok = 0;
+    if (golongan = 'A');
+    gaji pokok = 5000/jam
+    if (golongan = 'B');
+    System.out.println(x: "Golongan yang anda input 
+salah!");
+    }    double gaji lembur = 0;
+    if (gaji jam lembur == 1){
+        gaji lembur = 6000/jam 
+        if (gaji jam lembur == 2){
+            gaji lembur = 1000/jam 
+            
+            double total gaji = 0;
+            totalgaji = gajipokok:" + gajilembur;
+System.out.println("Nama KAryawan : " + namaKaryawan);
+System.out.println("Gaji Pokok : " + gajiPokok);
+System.out.println("Gaji Lembur : + gajilembur);
+System.out.println("Total Gaji: " + totalGaji);
+        }
+    }
+Screenshot
+ Penjelasan
+Terjadi error

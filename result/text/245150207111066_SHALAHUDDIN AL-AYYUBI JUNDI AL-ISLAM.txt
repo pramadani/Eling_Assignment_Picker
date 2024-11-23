@@ -1,0 +1,414 @@
+LAPORAN PRAKTIKUM PEMROGRAMAN DASAR  
+BAB  :   SELEKSI KONDISI  
+NAMA  :   SHALAHUDDIN AL -AYYUBI JUNDI AL -ISLAM  
+NIM  :   245150207111066  
+ASISTEN  :   BRAHMANTIO JATI PAMBUDI  
+     ARARYA PRAMADANI ALIEF RAHMAN  
+TGL PRAKTIKUM  :   26/09/2024  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2.5 Data dan Analisis Hasil Percobaan  
+2.5.1 Conditional Statement  
+Pertanyaan  
+1. Jalankan file constAss.java dan benahi jika menemukan kesalahan!  
+Syntax  
+  filkom Brawijaya  
+ 
+Screenshot  
+ 
+ 
+Penjelasan  
+Ketika program ini dijalankan, tidak ada kesalahan  
+ 
+Pertanyaan  
+2. Ubah kode di atas pada baris ke empat dengan mengubah type data String menjadi int,  
+amati yang terjadi kemudian jelaskan!  
+Syntax  
+ filkom 1  
+ 
+Screenshot  
+ 
+Penjelasan  
+Karena kita mengubah hasil kondisi dari String menjadi int, hasilnya adalah 1 ( jika kondisi 
+benar) atau 0 (jika kondisi salah). Di sini, kondisi (s == "filkom") benar, sehingga program 
+mencetak 1.  
+ 
+Pertanyaan  
+3. Tambahkan kode di bawah baris 5 dengan menambahkan program yang meminta 
+input user dengan memasukkan nama dan nim masing -masin g mahasiswa dan jika 
+benar maka akan mencetak nama dan nim mahasiswa, jika salah maka mencetak 
+“input nama salah” jika memasukkan nama yang salah, “input nim salah” jika 
+memasukka n nim yang salah  
+Syntax  
+ filkom Brawijaya  
+Masukkan nama: Budi  
+Masukkan NIM: 123456789  
+Nama: Budi, NIM: 123456789  
+ filkom Brawijaya  
+Masukkan nama: Budy  
+Masukkan NIM: 123456789  
+Input nama salah  
+filkom Brawijaya  
+Masukkan nama: Budi  
+Masukkan NIM: 123456788  
+Input NIM salah  
+ 
+Screenshot  
+ 
+ 
+Penjelasan  
+Kode ini menambahkan logika untuk meminta input dari pengguna (nama dan NIM), dan 
+membandingkannya dengan data yang sudah ditentukan. Jika nama atau NIM salah, program 
+akan mencetak pesan kesalahan yang sesuai.  
+ 
+Pertanyaan  
+4. Buat program yang meminta untuk memasukkan nama dan password kemudian  
+program akan meminta user untuk memasukkan nama dan password sesuai input  
+sebelumnya. Jika benar maka program akan mencetak informasi biodata mahasiswa dan  
+jika salah maka program akan mencetak “data tak ditemukan”.  
+ 
+Syntax  
+ Masukkan nama: Yubi  
+Masukkan password: malang124  
+Biodata Mahasiswa:  
+Nama: Yubi  
+NIM: 245150207111066  
+Fakultas: Ilmu Komputer  
+Jurusan: Teknik Informatika  
+ Masukkan nama: Yubi  
+Masukkan password: malang123  
+Data tak ditemukan  
+ 
+Screenshot  
+ 
+ 
+ 
+Penjelasan  
+Program ini meminta pengguna memasukkan nama dan password. Jika kedua input sesuai 
+dengan data yang sudah ditentukan, program akan menampilkan biodata mahasiswa. Jika 
+tidak, program akan menampilkan pesan "Data tak ditemukan".  
+ 
+2.5.2 If else  
+Pertanyaan  
+5. Jalankan  file seleksi1.java dan benahi jika menemukan kesalahan!  
+ 
+Syntax  
+ Masukkan nilai:  
+ 
+Screenshot  
+ 
+ 
+Penjelasan  
+Ketika program dijalankan, program ini akan berjalan tanpa kesalahan . 
+ 
+Pertanyaan  
+6. Masukkan nilai 30, 60 dan 80 saat program dijalankan, dan jawablah dengan screenshot  
+hasil keluaran dari program!  
+ 
+Syntax  
+ Masukkan nilai: 30  
+Anda gagal  
+ Masukkan nilai: 60  
+Anda harus mengulang!  
+ Masukkan nilai: 80  
+Anda lulus  
+ 
+Screenshot  
+ 
+ 
+ 
+Penjelasan  
+  Untuk input 30, nilai tersebut kurang dari 40, sehingga output adalah "Anda gagal".  
+  Untuk input 60, nilai tersebut antara 40 dan 60, sehingga output adalah "Anda harus 
+mengulang!".  
+  Untuk input 80, nilai tersebut lebih dari 60, sehingga output adalah "Anda lulus".  
+ 
+Pertanyaan  
+7. Pada baris 9, ubahlah kode program menjadi System.out.println("Nilai  
+kurang!");, pengaruh apa yang ditimbulkan setelah dilakukan pengubahan kode di  
+atas!  
+ 
+Syntax  
+ Masukkan nilai: 60  
+Nilai kurang!  
+ 
+Screenshot  
+ 
+ 
+Penjelasan  
+Pengaruh dari perubahan ini adalah pada pesan  output  yang ditampilkan ketika nilai berada 
+di rentang 40 hingga 60. Sebelumnya, program akan mencetak "Anda harus mengulang!", 
+tetapi setelah perubahan, program akan mencetak "Nilai kurang!" untuk nilai di rentang 
+tersebut.  
+ 
+2.5.3 Nested If  
+Pertanyaan  
+8. Jalankan file seleksi2.java dan benahi jika menemukan kesalahan!  
+Syntax  
+ Masukkan nilai:  
+ 
+Screenshot  
+ 
+ 
+Penjelasan  
+Tidak ada kesalahan sintaks dalam kode ini, dan program akan berjalan sesuai dengan nilai 
+input.  
+ 
+Pertanyaan  
+9. Masukkan nilai 5, 20, 30 saat program dijalankan, jelaskan alur jalan program dan  
+beri screenshot keluaran dari program!  
+Syntax  
+ Masukkan nilai: 5  
+Filkom 
+UB 
+ Masukkan nilai: 20  
+PTIIK 
+Brawijaya  
+ Masukkan nilai: 30  
+PTIIK 
+Brawijaya  
+ 
+Screenshot  
+ 
+ 
+ 
+Penjelasan  
+  Seleksi Kondisi Pertama : if (nilai * 2 < 50)  
+ Jika kondisi ini terpenuhi, nilai ditambah 10.  
+  Seleksi Kondisi Kedua : if (nilai <= 20)  
+ Jika nilai kurang dari atau sama dengan 20, program akan mencetak "Filkom", dan 
+jika nilai ganjil, mencetak "UB", jika genap mencetak " Brawijaya".  
+ Jika nilai lebih besar dari 20, mencetak "PTIIK", dan jika nilai ganjil, mencetak "UB", 
+jika genap mencetak "Brawijaya".  
+ 
+Pertanyaan  
+10. Ubah kode di atas dengan memanfaatkan operasi and!  
+Syntax  
+ Masukkan nilai:  
+ 
+Screenshot  
+ 
+ 
+Penjelasan  
+ Dalam perubahan ini, operator && digunakan pada seleksi kondisi pertama, di mana 
+selain mengecek apakah nilai * 2 < 50, juga dicek apakah nilai adalah bilangan ganjil 
+(nilai % 2 == 1).  
+ 
+2.5.4 Switch case  
+Pertanyaan  
+11. Jalankan file seleksi3.java dan benahi jika menemukan kesalahan!  
+ 
+Syntax  
+ Tipe Mata uang yang tersedia  
+1. Dolar - USA (kurs USD 1 = Rp 8000, -) 
+2. Yen - Jepang (kurs JPY 1 = Rp. 4000, -) 
+3. Poundsterling - Inggris (kurs 1 Poundsterling = Rp. 
+10500,-) 
+4. Euro - MEE (kurs EUR 1 = Rp. 8900, -) 
+5. Riyal - Arab Saudi (kurs 1 Riyal = Rp. 1100, -) 
+Masukkan jenis mata uang anda:  
+ 
+Screenshot  
+ 
+ 
+Penjelasan  
+Program ini tidak memiliki kesalahan dan akan berjalan sesuai input yang diberikan.  
+ 
+Pertanyaan  
+12. Pada baris 18,22,26,30 dan 34 hapus kode  break, pengaruh apa yang terjadi setelah  
+pengubahan kode tersebut!  
+ 
+Syntax  
+ Tipe Mata uang yang tersedia  
+1. Dolar - USA (kurs USD 1 = Rp 8000, -) 
+2. Yen - Jepang (kurs JPY 1 = Rp. 4000, -) 
+3. Poundsterling - Inggris (kurs 1 Poundsterling = Rp. 
+10500,-) 
+4. Euro - MEE (kurs EUR 1 = Rp. 8900, -) 
+5. Riyal - Arab Saudi (kurs 1 Riyal = Rp. 1100, -) 
+Masukkan jenis mata uang anda:  
+ 
+Screenshot  
+ 
+ 
+Penjelasan  
+Tanpa break, semua case akan dijalankan secara berurutan hingga program menemukan break 
+atau mencapai default.  
+ 
+Pertanyaan  
+13. Apa perbedaan seleksi kondisi dengan menggunakan switch case dan if -else, dan kapan  
+kita harus menggunakan if -else dan kapan menggunakan switch case?  
+ 
+Penjelasan  
+Perbedaan utama antara switch -case dan if -else: 
+1. switch -case: 
+o Digunakan ketika kita memiliki beberapa kondisi yang harus dibandingkan 
+terhadap nilai tetap (konstan), seperti angka atau karakter.  
+o Hanya dapat digunakan untuk membandingkan nilai int, char, byte, short, 
+String, atau enum.  
+o Lebih efisien  dibandingkan dengan banyak if-else jika ada banyak 
+perbandingan tetap.  
+o Lebih mudah dibaca  dan lebih terstruktur ketika ada banyak pilihan yang 
+perlu dieksekusi berdasarkan nilai tertentu.  
+2. if-else: 
+o Digunakan ketika kita harus memeriksa kondisi dengan ekspresi logika yang 
+lebih kompleks, sepe rti perbandingan > <, kondisi berbasis boolean, atau 
+beberapa kondisi yang digabungkan menggunakan operator logika.  
+o Bisa menangani kondisi yang tidak terbatas dan fleksibel, cocok untuk kasus 
+di mana kita membandingkan nilai yang lebih dinamis.  
+o Digunakan u ntuk mengevaluasi kondisi yang lebih kompleks dan logika yang 
+lebih rumit.  
+Kapan menggunakan if -else dan kapan menggunakan switch -case?  
+ Gunakan switch -case jika: 
+o Anda memiliki banyak nilai tetap yang akan dibandingkan.  
+o Semua nilai yang dibandingkan adalah tipe yang didukung oleh switch -case. 
+o Logika yang dieksekusi sederhana dan bergantung pada nilai tetap.  
+ Gunakan if-else jika: 
+o Kondisi yang harus dievaluasi lebih kompleks.  
+o Anda perlu menggunakan operator logika, seperti <, >, &&, ||.  
+o Nilai yang dibandingkan  bukan nilai tetap, atau tipe yang tidak didukung oleh 
+switch -case. 
+ 
+ 
+ 
+2.5.5 Tugas Praktikum  
+1. Buatlah program sebagai berikut dengan menggunakan metode switch case  
+ Menu: 
+1. menghitung luas dan keliling persegi panjang  
+2. menghitung luas dan keliling lingkaran  
+3. menghitung luas dan keliling segitiga  
+Pilihan anda: 3  Masukkan a: 3  
+Masukkan b: 4  
+Masukkan r: 5  
+Keliling segitiga : 12 cm  
+Luas segitiga : 6 cm2  
+Pilihan anda: 10  
+Data tak ditemukan, program dihentikan ...  
+ 
+Syntax  
+ Menu: 
+1. Menghitung luas dan keliling persegi panjang  
+2. Menghitung luas dan keliling lingkaran  
+3. Menghitung luas dan keliling segitiga  
+Pilihan anda: 2  
+Masukkan jari -jari: 17  
+Luas lingkaran: 907,92 cm2  
+Keliling lingkaran: 106,81 cm  
+ 
+Screenshot   
+ 
+ 
+ 
+Penjelasan  
+  Program meminta pengguna memilih salah satu dari tiga opsi (persegi panjang, lingkaran, 
+atau segitiga).  
+  Bergantung pada pilihan, program meminta input yang diperlukan dan menghitung luas 
+serta keliling dari bentuk tersebut.  
+  Case  default digunakan untuk menangani inp ut yang tidak valid  
+ 
+Pertanyaan  
+2. Untuk menentukan kriteria kegemukan, digunakan IMT (Indeks Massa Tubuh), yang bisa  
+dihitung menggunakan rumus:  
+IMT = b / t 2  
+b = berat badan (kg)  
+t = tinggi badan (m)  
+ 
+Kriteria untuk nilai IMT ditabelkan sebagai berikut:  
+Modul Praktikum Pemrograman Dasar 15  
+Nilai IMT  - Kriteria  
+IMT ≤ 18,5 Kurus  
+18,5 < IMT ≤ 25 Normal  
+25 < IMT ≤ 30 Gemuk  
+IMT > 30 Kegemukan  
+ 
+Susun program dengan tampilan sebagai berikut dengan menggunakan metode if -else!  
+ Berat badan (kg) : 45  
+Tinggi badan ( m) :1.72  
+IMT = 15,21 Termasuk kurus  
+Berat badan (kg) : 85  
+Tinggi badan (m) :1.71  
+IMT = 27,76 Termasuk gemuk  
+ 
+Syntax  
+  Taruh Hasil Codingan di sini, font : courier 12  
+ 
+ Berat badan (kg): 65  
+Tinggi badan (m): 1,78  
+IMT = 20,52  
+Termasuk normal  
+ 
+Screenshot  
+ 
+ 
+Penjelasan  
+  Program ini menghitung Indeks Massa Tubuh (IMT) menggunakan input berat badan dan 
+tinggi badan dari pengguna.  
+  Berdasarkan nilai IMT yang dihitung, program menentukan apakah pengguna termasuk 
+kurus, normal, gemuk, atau kegemukan, sesuai  dengan kriteria IMT yang diberikan.  
+ 
+Pertanyaan  
+3. Susun program untuk masalah pengajian sebagai berikut:  
+Masukan yang dibutuhkan oleh program adalah: jumlah jam kerja tiap minggu. Keluaran  
+program adalah: total upah dari pegawai tertentu.  
+Aturan yang dit erapkan adalah:  
+• Batas kerja maksimal adalah 60 jam / minggu, dengan upah Rp. 5000, - / jam. Kelebihan 
+jam kerja  
+dari batas maksimum akan dianggap sebagai lembur dengan upah Rp. 6000, - / jam.  
+• Batas kerja minimal adalah 50 jam / minggu. Apabila pegawai me mpunyai jam kerja di 
+bawah  
+batas kerja minimal ini, maka akan dikenakan denda sebesar Rp. 1000, - / jam.  
+Contoh tampilan:  
+ Jam kerja : 55  
+Upah = Rp. 275000  
+Lembur = Rp. 0  
+Denda = Rp. 0  
+---------------------  
+Total = Rp. 275000  
+Jam kerja : 70  
+Upah = Rp. 300000  
+Lembur = Rp. 60000  
+Denda = Rp. 0  
+---------------------  
+Total = Rp. 360000  
+Jam kerja : 40  
+Upah = Rp. 200000  
+Lembur = Rp. 0  
+Denda = Rp. 10000  
+---------------------  
+Total = Rp. 190000  
+ 
+Syntax  
+ Jam kerja: 55  
+Upah = Rp. 275000  
+Lembur = Rp. 0  
+Denda = Rp.  0 
+---------------------  
+Total = Rp. 275000  
+ Jam kerja: 70  
+Upah = Rp. 300000  Lembur = Rp. 60000  
+Denda = Rp. 0  
+---------------------  
+Total = Rp. 360000  
+ Jam kerja: 40  
+Upah = Rp. 200000  
+Lembur = Rp. 0  
+Denda = Rp. 10000  
+---------------------  
+Total = Rp. 190000 
+ 
+Screenshot  
+ 
+ 
+ 
+Penjelasan  
+  Menghitung upah berdasarkan jumlah jam kerja per minggu.  
+  Jika jam kerja > 60, maka sisanya dihitung sebagai lembur.  
+  Jika jam kerja < 50, denda dikenakan sebesar Rp 1000 per jam yang kurang dari 50 jam.  
+  Menghitung total upah setelah mempertimbangkan lembur dan denda.  
