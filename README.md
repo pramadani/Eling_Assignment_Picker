@@ -5,7 +5,10 @@
 ## To Do
 1. Enter student names in `data/nama.txt` in order.
 2. Enter student NIMs in `data/nim.txt` in order.
-3. Ensure that 7-Zip is installed locally.
+
+## Requirements
+1. Ensure that 7-Zip is installed locally.
+2. Ensure all libraries in `requirements.txt` are installed.
 
 ## How to Run
 1. Make sure the `nama` and `nim` files are set up properly.

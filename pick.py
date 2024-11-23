@@ -12,6 +12,18 @@ destination_archive_folder = "result/archive"
 os.makedirs(destination_documents_folder, exist_ok=True)
 os.makedirs(destination_archive_folder, exist_ok=True)
 
+if not os.path.isfile(nama_file_path):
+    print(f"File {nama_file_path} tidak ditemukan!")
+    exit()
+
+if not os.path.isfile(nim_file_path):
+    print(f"File {nim_file_path} tidak ditemukan!")
+    exit()
+
+if not os.path.isdir(source_folder):
+    print(f"Folder {source_folder} tidak ditemukan!")
+    exit()
+
 extensions_map = {
     "document": [".pdf", ".docx", ".doc"],
     "archive": [".zip", ".rar", ".7z", ".tar", ".gz", ".bz2"]

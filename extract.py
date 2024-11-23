@@ -63,11 +63,21 @@ def process_archive(archive_name, archives_folder, code_temp_folder, final_code_
             print(f"Gagal menghapus folder sementara {archive_extract_folder}: {e}")
 
 result_folder = Path('result')
+if not result_folder.exists():
+    raise FileNotFoundError("Folder 'result' tidak ditemukan!")
+
 archives_folder = result_folder / 'archive'
+if not archives_folder.exists():
+    raise FileNotFoundError(f"Folder 'archive' di dalam 'result' tidak ditemukan!")
+
 code_temp_folder = result_folder / 'code_temp'
 final_code_folder = result_folder / 'code'
 
 final_code_folder.mkdir(parents=True, exist_ok=True)
+
+if not any(archives_folder.iterdir()):
+    print(f"Tidak ada file di folder '{archives_folder}'")
+    exit()
 
 for archive_name in archives_folder.iterdir():
     if archive_name.is_file():
